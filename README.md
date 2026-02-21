@@ -29,4 +29,4 @@ people/<slug>/
 
 ## License
 
-CC BY 4.0（予定）
+CC0 1.0

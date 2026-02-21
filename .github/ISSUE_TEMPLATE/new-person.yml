@@ -1,0 +1,21 @@
+name: "New person"
+description: "Request a new person profile"
+labels: ["new profile"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Person
+      placeholder: "e.g., Grace Hopper"
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this person?
+      placeholder: "What makes them interesting as an agent?"
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source candidates
+      description: "Links/books/primary sources"
