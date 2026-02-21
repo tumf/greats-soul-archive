@@ -1,9 +1,27 @@
 # Greats Soul Archive
 
-A community repository of **OpenClaw-style `IDENTITY.md` and `SOUL.md`** profiles for historical greats and high-impact business leaders.
+A community repository of **OpenClaw-style `IDENTITY.md` and `SOUL.md`** profiles for historical greats, philosophers, scientists, and high-impact builders.
 
-- Goal: capture decision-making style, values, and communication patterns as reusable agent configuration.
-- Principle: **separate sources (facts) from interpretation (agent persona)**.
+## Why this exists
+
+We want a world where you can *pick a mind* and have a real conversation:
+
+- Talk to **Plato** about justice.
+- Ask **Feynman** to explain something until it’s actually clear.
+- Stress-test a product idea with **Jobs**-level taste.
+
+Not as fan fiction — but as *usable agent configurations*.
+
+This repo is the missing layer between biography and behavior: a compact, practical description of how a person thinks, decides, speaks, and fails.
+
+## Principles
+
+- **Separate sources (facts) from interpretation (agent persona).**
+  - `sources.md` = references + confidence notes
+  - `SOUL.md` / `IDENTITY.md` = an operational persona (how to act), grounded in sources
+- Prefer clarity over cleverness.
+- Make uncertainty explicit.
+- Be especially conservative for living people.
 
 ## Repo structure
 
@@ -14,19 +32,18 @@ people/<slug>/
   sources.md    # references (books, interviews, primary sources)
 ```
 
-## Included (initial)
+## Use cases
 
-- Steve Jobs
-- Elon Musk
-- Masayoshi Son (孫正義)
-- Oda Nobunaga (織田信長)
+- Build a bot where users can choose a profile and **chat with their favorite philosopher**.
+- Use `SOUL.md` as a “thinking style adapter” for writing, decision memos, or reviews.
+- Teach: show how different mental models respond to the same prompt.
 
 ## Contributing
 
 PRs welcome — add a new person in ~10 minutes:
 
 1. Create: `people/<slug>/`
-2. Add: `IDENTITY.md`, `SOUL.md`, `sources.md` (required)
+2. Add: `IDENTITY.md`, `SOUL.md`, `sources.md` (**required**)
 3. Open a PR
 
 See: `CONTRIBUTING.md`
@@ -41,7 +58,7 @@ See: `CONTRIBUTING.md`
 ## Notes / Disclaimer
 
 - This is not academic history; it’s an **agent-design artifact**.
-- Avoid defamation/harassment. Be especially conservative for living people.
+- Avoid defamation/harassment.
 - If uncertain, mark uncertainty and/or add it to `sources.md`.
 
 ## License
