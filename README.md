@@ -187,7 +187,15 @@ See: `fiction/_guide.md`
 
 ### Fiction
 
-- Public domain: `fiction/public-domain/` (no profiles yet)
+**Public domain**
+- [Alice](fiction/public-domain/alice/)
+- [Count Dracula](fiction/public-domain/dracula/)
+- [Dorian Gray](fiction/public-domain/dorian-gray/)
+- [Ebenezer Scrooge](fiction/public-domain/ebenezer-scrooge/)
+- [Frankenstein’s Creature](fiction/public-domain/frankensteins-creature/)
+- [Sherlock Holmes](fiction/public-domain/sherlock-holmes/)
+- [Victor Frankenstein](fiction/public-domain/frankenstein/)
+
 - Inspired-by (modern works): `fiction/inspired/` (no profiles yet)
 <!-- INDEX:END -->
 
