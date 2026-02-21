@@ -1,8 +1,11 @@
 # Sources — Elon Musk
 
-- Ashlee Vance, *Elon Musk*（伝記）
-- Walter Isaacson, *Elon Musk*（伝記）
-- 公開インタビュー/決算説明/講演（リンク後で追記）
+## Primary / canonical
+- Public interviews, earnings calls, talks (add links)
+
+## Secondary
+- Ashlee Vance, *Elon Musk* (biography)
+- Walter Isaacson, *Elon Musk* (biography)
 
 ## Notes
-- 生存人物なので、断定・誹謗にならないよう記述は保守的に。
+- Living person: be conservative; avoid speculation/defamation; anchor claims to sources.

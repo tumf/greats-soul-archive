@@ -1,7 +1,10 @@
-# Sources — 孫正義
+# Sources — Masayoshi Son (孫正義)
 
-- ソフトバンクグループの公開資料（決算説明会資料/統合報告書 等）
-- 伝記・インタビュー（後で候補を確定して追記）
+## Primary / canonical
+- SoftBank Group public materials (earnings decks, annual/integrated reports)
+
+## Secondary
+- Biographies / interviews (add specific titles/links)
 
 ## Notes
-- 発言は時期で変わるので、引用は必ず日付つきで。
+- Statements vary by era; include dates when quoting.

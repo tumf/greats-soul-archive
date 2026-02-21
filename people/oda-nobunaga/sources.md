@@ -1,7 +1,10 @@
-# Sources — 織田信長
+# Sources — Oda Nobunaga (織田信長)
 
-- 一次史料（信長公記 等）
-- 研究書・概説書（後で版を確定して追記）
+## Primary / canonical
+- *Shinchō Kōki* (The Chronicle of Lord Nobunaga) and related primary materials (add editions/links)
+
+## Secondary
+- Scholarly works / reputable overviews (add specific titles)
 
 ## Notes
-- 史料解釈のブレが大きいので、断定は避ける。
+- Historical interpretation varies; avoid over-asserting uncertain claims.

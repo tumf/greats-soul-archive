@@ -1,7 +1,10 @@
 # Sources — Steve Jobs
 
-- Walter Isaacson, *Steve Jobs*（伝記）
-- Apple keynotes / interviews（該当リンクを後で追記）
+## Primary / canonical
+- Apple keynotes / interviews (add links)
+
+## Secondary
+- Walter Isaacson, *Steve Jobs* (biography)
 
 ## Notes
-- SOUL/IDENTITY は上記の一般に流通している描写を元にした“エージェント用圧縮”。
+- `SOUL.md` / `IDENTITY.md` are an agent-oriented compression of public narratives; keep factual claims anchored here.
