@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class Entry:
     name: str
     link: str
+    category: str | None = None
 
 
 def parse_name(identity_path: Path) -> str:
@@ -37,6 +38,17 @@ def parse_name(identity_path: Path) -> str:
     return identity_path.parent.name
 
 
+def read_category(folder: Path) -> str | None:
+    meta = folder / "meta.yml"
+    if not meta.exists():
+        return None
+    txt = meta.read_text(encoding="utf-8")
+    m = re.search(r"^category:\s*([a-zA-Z0-9_-]+)\s*$", txt, flags=re.MULTILINE)
+    if not m:
+        return None
+    return m.group(1).strip().lower()
+
+
 def list_people() -> list[Entry]:
     base = ROOT / "people"
     out: list[Entry] = []
@@ -49,7 +61,8 @@ def list_people() -> list[Entry]:
         if not identity.exists():
             continue
         name = parse_name(identity)
-        out.append(Entry(name=name, link=f"people/{d.name}/"))
+        cat = read_category(d)
+        out.append(Entry(name=name, link=f"people/{d.name}/", category=cat))
     out.sort(key=lambda e: e.name.lower())
     return out
 
@@ -71,18 +84,75 @@ def list_fiction(kind: str) -> list[Entry]:
     return out
 
 
+CATEGORY_ORDER = [
+    "business",
+    "politics",
+    "strategy",
+    "philosophy",
+    "science",
+    "computing",
+    "economics",
+    "art",
+    "uncategorized",
+]
+
+CATEGORY_LABELS_EN = {
+    "business": "Builders / Business",
+    "politics": "Politics / Statecraft",
+    "strategy": "Military / Strategy",
+    "philosophy": "Philosophy",
+    "science": "Science / Math",
+    "computing": "Computing / Software",
+    "economics": "Economics / Social Science",
+    "art": "Art / Literature",
+    "uncategorized": "Uncategorized",
+}
+
+CATEGORY_LABELS_JA = {
+    "business": "ビルダー / ビジネス",
+    "politics": "政治 / 統治",
+    "strategy": "軍略 / 戦略",
+    "philosophy": "哲学",
+    "science": "科学 / 数学",
+    "computing": "計算機 / ソフトウェア",
+    "economics": "経済 / 社会科学",
+    "art": "芸術 / 文学",
+    "uncategorized": "未分類",
+}
+
+
+def group_people(people: list[Entry]) -> dict[str, list[Entry]]:
+    grouped: dict[str, list[Entry]] = {k: [] for k in CATEGORY_ORDER}
+    for e in people:
+        key = e.category or "uncategorized"
+        if key not in grouped:
+            key = "uncategorized"
+        grouped[key].append(e)
+    for k in grouped:
+        grouped[k].sort(key=lambda e: e.name.lower())
+    return grouped
+
+
 def render_index_en() -> str:
     people = list_people()
     pub = list_fiction("public-domain")
     insp = list_fiction("inspired")
 
+    grouped = group_people(people)
+
     lines: list[str] = []
     lines.append("### People")
     lines.append("")
-    for e in people:
-        lines.append(f"- [{e.name}]({e.link})")
 
-    lines.append("")
+    for cat in CATEGORY_ORDER:
+        entries = grouped.get(cat, [])
+        if not entries:
+            continue
+        lines.append(f"**{CATEGORY_LABELS_EN.get(cat, cat)}**")
+        for e in entries:
+            lines.append(f"- [{e.name}]({e.link})")
+        lines.append("")
+
     lines.append("### Fiction")
     lines.append("")
 
@@ -109,13 +179,21 @@ def render_index_ja() -> str:
     pub = list_fiction("public-domain")
     insp = list_fiction("inspired")
 
+    grouped = group_people(people)
+
     lines: list[str] = []
     lines.append("### People（実在）")
     lines.append("")
-    for e in people:
-        lines.append(f"- [{e.name}]({e.link})")
 
-    lines.append("")
+    for cat in CATEGORY_ORDER:
+        entries = grouped.get(cat, [])
+        if not entries:
+            continue
+        lines.append(f"**{CATEGORY_LABELS_JA.get(cat, cat)}**")
+        for e in entries:
+            lines.append(f"- [{e.name}]({e.link})")
+        lines.append("")
+
     lines.append("### Fiction（架空）")
     lines.append("")
 
