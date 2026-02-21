@@ -1,4 +1,4 @@
-# Sources — Masayoshi Son (孫正義)
+# Sources — Masayoshi Son
 
 ## Primary / canonical
 - SoftBank Group public materials (earnings decks, annual/integrated reports)

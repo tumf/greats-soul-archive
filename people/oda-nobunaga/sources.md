@@ -1,4 +1,4 @@
-# Sources — Oda Nobunaga (織田信長)
+# Sources — Oda Nobunaga
 
 ## Primary / canonical
 - *Shinchō Kōki* (The Chronicle of Lord Nobunaga) and related primary materials (add editions/links)
