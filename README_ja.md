@@ -30,7 +30,13 @@ people/<slug>/
   IDENTITY.md   # エージェントの名札（短い）
   SOUL.md       # 行動規範・口調・価値観（長い）
   sources.md    # 根拠（伝記/インタビュー/書籍/一次情報など）
+
+fiction/
+  public-domain/<slug>/
+  inspired/<slug>/
 ```
+
+詳細: `fiction/_guide.md`
 
 ## 使い道
 

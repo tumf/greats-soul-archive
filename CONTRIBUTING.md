@@ -2,7 +2,9 @@
 
 PR歓迎。人物追加も修正もOK。
 
-## Quickstart: add a new person
+## Quickstart: add a new profile
+
+### Real people
 
 1. Create a folder: `people/<slug>/`
 2. Add 3 files:
@@ -10,6 +12,15 @@ PR歓迎。人物追加も修正もOK。
    - `SOUL.md`
    - `sources.md`
 3. Open a PR.
+
+### Fictional characters
+
+We accept fiction under `fiction/`.
+
+- Public domain: `fiction/public-domain/<slug>/`
+- Modern works (inspired-by): `fiction/inspired/<slug>/`
+
+See: `fiction/_guide.md`
 
 ## Slug rules
 

@@ -30,7 +30,13 @@ people/<slug>/
   IDENTITY.md   # short nameplate
   SOUL.md       # operating principles & style
   sources.md    # references (books, interviews, primary sources)
+
+fiction/
+  public-domain/<slug>/
+  inspired/<slug>/
 ```
+
+See: `fiction/_guide.md`
 
 ## Use cases
 
