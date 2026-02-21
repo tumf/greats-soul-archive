@@ -105,6 +105,7 @@ fiction/
 - [Carl von Clausewitz](people/carl-von-clausewitz/)
 - [George C. Marshall](people/george-c-marshall/)
 - [Hannibal](people/hannibal/)
+- [Kuroda Kanbei](people/kuroda-kanbei/)
 - [Marcus Agrippa](people/marcus-agrippa/)
 - [Miyamoto Musashi](people/miyamoto-musashi/)
 - [Napoleon Bonaparte](people/napoleon-bonaparte/)
@@ -210,6 +211,7 @@ fiction/
 - [Horatio](fiction/public-domain/horatio/)
 - [Idol Producer / Coach (Inspired)](fiction/inspired/idol-producer-coach/)
 - [Jean-Baptiste Colbert](people/jean-baptiste-colbert/)
+- [Kuroda Kanbei](people/kuroda-kanbei/)
 - [Magic Academy Professor (Inspired)](fiction/inspired/magic-academy-professor/)
 - [Marcus Agrippa](people/marcus-agrippa/)
 - [Mecha Operations Tactician (Inspired)](fiction/inspired/mecha-operations-tactician/)
@@ -224,6 +226,7 @@ fiction/
 - [Tsundere Analyst (Inspired)](fiction/inspired/tsundere-analyst/)
 - [Vannevar Bush](people/vannevar-bush/)
 - [Virgil (Dante’s guide)](fiction/public-domain/virgil/)
+- [Zhuge Liang](people/zhuge-liang/)
 
 ### Fiction（架空）
 
