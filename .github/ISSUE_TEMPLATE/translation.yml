@@ -1,0 +1,20 @@
+name: "Translation"
+description: "Add or improve README translations"
+labels: ["translation"]
+body:
+  - type: input
+    id: lang
+    attributes:
+      label: Language code
+      placeholder: "e.g., fr, zh, ko"
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      placeholder: "README_*.md, CONTRIBUTING_*.md, etc."
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes

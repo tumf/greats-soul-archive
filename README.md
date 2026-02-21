@@ -1,31 +1,48 @@
 # Greats Soul Archive
 
-歴史上の偉人・ビジネスで成功した人物を題材に、**OpenClaw風の `IDENTITY.md` / `SOUL.md`** を集めるリポジトリ。
+A community repository of **OpenClaw-style `IDENTITY.md` and `SOUL.md`** profiles for historical greats and high-impact business leaders.
 
-- 目的: 「人物の意思決定スタイル/価値観/口調」を、エージェント設定ファイルとして再利用できる形にする
-- 方針: **史実の出典（sources）と、エージェントとしての“解釈/キャラ付け”（SOUL/IDENTITY）を分離**する
+- Goal: capture decision-making style, values, and communication patterns as reusable agent configuration.
+- Principle: **separate sources (facts) from interpretation (agent persona)**.
 
-## Structure
+## Repo structure
 
 ```
 people/<slug>/
-  IDENTITY.md   # エージェントの名札（短い）
-  SOUL.md       # 行動規範・口調・価値観（長い）
-  sources.md    # 根拠リンク（伝記/インタビュー/書籍/一次情報など）
+  IDENTITY.md   # short nameplate
+  SOUL.md       # operating principles & style
+  sources.md    # references (books, interviews, primary sources)
 ```
 
 ## Included (initial)
 
 - Steve Jobs
 - Elon Musk
-- 孫正義
-- 織田信長
+- Masayoshi Son (孫正義)
+- Oda Nobunaga (織田信長)
+
+## Contributing
+
+PRs welcome — add a new person in ~10 minutes:
+
+1. Create: `people/<slug>/`
+2. Add: `IDENTITY.md`, `SOUL.md`, `sources.md` (required)
+3. Open a PR
+
+See: `CONTRIBUTING.md`
+
+## Translations
+
+- English: `README.md`
+- Japanese: `README_ja.md`
+
+(Additional languages welcome: `README_<lang>.md`)
 
 ## Notes / Disclaimer
 
-- これは歴史研究ではなく、**エージェント設計用の“圧縮した人格モデル”**。
-- 断定しない。曖昧な点は `sources.md` に「不確か」と書く。
-- 生存人物は特に、誹謗・断定・名誉毀損にならないよう注意。
+- This is not academic history; it’s an **agent-design artifact**.
+- Avoid defamation/harassment. Be especially conservative for living people.
+- If uncertain, mark uncertainty and/or add it to `sources.md`.
 
 ## License
 
