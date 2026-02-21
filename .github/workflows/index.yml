@@ -1,0 +1,24 @@
+name: index
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Build index
+        run: python3 scripts/build_index.py
+
+      - name: Check for diff
+        run: |
+          git diff --exit-code

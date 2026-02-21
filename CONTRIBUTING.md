@@ -22,6 +22,13 @@ We accept fiction under `fiction/`.
 
 See: `fiction/_guide.md`
 
+## Keeping the index up to date
+
+The README index is generated.
+
+- Run: `python3 scripts/build_index.py`
+- Don’t edit the index section by hand.
+
 ## Slug rules
 
 - lowercase + kebab-case: `steve-jobs`, `oda-nobunaga`

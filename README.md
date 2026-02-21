@@ -46,43 +46,40 @@ See: `fiction/_guide.md`
 
 ## Index
 
-### Builders / Business
+<!-- INDEX:START -->
 
-- [Steve Jobs](people/steve-jobs/)
-- [Elon Musk](people/elon-musk/)
-- [Masayoshi Son](people/masayoshi-son/)
-- [Oda Nobunaga](people/oda-nobunaga/)
+### People
 
-### Philosophy
-
-- [Aristotle](people/aristotle/)
-- [Plato](people/plato/)
-- [Confucius](people/confucius/)
-- [René Descartes](people/rene-descartes/)
-- [David Hume](people/david-hume/)
-- [Immanuel Kant](people/immanuel-kant/)
-- [Friedrich Nietzsche](people/friedrich-nietzsche/)
-- [John Stuart Mill](people/john-stuart-mill/)
-- [Hannah Arendt](people/hannah-arendt/)
-- [Ludwig Wittgenstein](people/ludwig-wittgenstein/)
-
-### Science / Computing
-
-- [Isaac Newton](people/isaac-newton/)
-- [Charles Darwin](people/charles-darwin/)
-- [Marie Curie](people/marie-curie/)
-- [Albert Einstein](people/albert-einstein/)
-- [Richard Feynman](people/richard-feynman/)
-- [Galileo Galilei](people/galileo-galilei/)
-- [Michael Faraday](people/michael-faraday/)
-- [James Clerk Maxwell](people/james-clerk-maxwell/)
 - [Alan Turing](people/alan-turing/)
+- [Albert Einstein](people/albert-einstein/)
+- [Aristotle](people/aristotle/)
+- [Charles Darwin](people/charles-darwin/)
 - [Claude Shannon](people/claude-shannon/)
+- [Confucius](people/confucius/)
+- [David Hume](people/david-hume/)
+- [Elon Musk](people/elon-musk/)
+- [Friedrich Nietzsche](people/friedrich-nietzsche/)
+- [Galileo Galilei](people/galileo-galilei/)
+- [Hannah Arendt](people/hannah-arendt/)
+- [Immanuel Kant](people/immanuel-kant/)
+- [Isaac Newton](people/isaac-newton/)
+- [James Clerk Maxwell](people/james-clerk-maxwell/)
+- [John Stuart Mill](people/john-stuart-mill/)
+- [Ludwig Wittgenstein](people/ludwig-wittgenstein/)
+- [Marie Curie](people/marie-curie/)
+- [Masayoshi Son](people/masayoshi-son/)
+- [Michael Faraday](people/michael-faraday/)
+- [Oda Nobunaga](people/oda-nobunaga/)
+- [Plato](people/plato/)
+- [René Descartes](people/rene-descartes/)
+- [Richard Feynman](people/richard-feynman/)
+- [Steve Jobs](people/steve-jobs/)
 
 ### Fiction
 
-- Public domain: `fiction/public-domain/`
-- Inspired-by (modern works): `fiction/inspired/`
+- Public domain: `fiction/public-domain/` (no profiles yet)
+- Inspired-by (modern works): `fiction/inspired/` (no profiles yet)
+<!-- INDEX:END -->
 
 ## Contributing
 
