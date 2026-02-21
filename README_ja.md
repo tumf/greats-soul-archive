@@ -196,7 +196,9 @@ fiction/
 - [Sherlock Holmes](fiction/public-domain/sherlock-holmes/)
 - [Victor Frankenstein](fiction/public-domain/frankenstein/)
 
-- Inspired-by（現行作品）: `fiction/inspired/`（まだなし）
+- Inspired-by（現行作品）:
+  - [Cyberpunk Hacker-Detective (Inspired)](fiction/inspired/cyberpunk-hacker-detective/)
+  - [Shōnen Determination Hero (Inspired)](fiction/inspired/shonen-determination-hero/)
 <!-- INDEX_JA:END -->
 
 ## コントリビュート

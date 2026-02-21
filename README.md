@@ -196,7 +196,9 @@ See: `fiction/_guide.md`
 - [Sherlock Holmes](fiction/public-domain/sherlock-holmes/)
 - [Victor Frankenstein](fiction/public-domain/frankenstein/)
 
-- Inspired-by (modern works): `fiction/inspired/` (no profiles yet)
+- Inspired-by (modern works):
+  - [Cyberpunk Hacker-Detective (Inspired)](fiction/inspired/cyberpunk-hacker-detective/)
+  - [Shōnen Determination Hero (Inspired)](fiction/inspired/shonen-determination-hero/)
 <!-- INDEX:END -->
 
 ## Contributing
