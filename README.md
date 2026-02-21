@@ -208,7 +208,6 @@ See: `fiction/_guide.md`
   - [Patroclus](fiction/public-domain/patroclus/)
 - *fantasy*
   - [Alice](fiction/public-domain/alice/)
-  - [Faithful Companion (Archetype)](fiction/public-domain/samwise-archetype/)
   - [Virgil (Dante’s guide)](fiction/public-domain/virgil/)
 - *horror*
   - [Count Dracula](fiction/public-domain/dracula/)
@@ -223,6 +222,8 @@ See: `fiction/_guide.md`
   - [Victor Frankenstein](fiction/public-domain/frankenstein/)
 
 **Inspired-by (modern works)**
+- *fantasy*
+  - [Faithful Companion (Archetype)](fiction/inspired/samwise-archetype/)
 - *other*
   - [Shōnen Determination Hero (Inspired)](fiction/inspired/shonen-determination-hero/)
 - *scifi*
