@@ -1,0 +1,35 @@
+name: "New profile (from seed list)"
+description: "Create a new profile using seed/people-ideas.md"
+labels: ["new profile"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Pick one from `seed/people-ideas.md`, then open this issue.
+  - type: input
+    id: name
+    attributes:
+      label: Person / character
+      placeholder: "e.g., Grace Hopper"
+    validations:
+      required: true
+  - type: input
+    id: slug
+    attributes:
+      label: Suggested slug
+      placeholder: "e.g., grace-hopper"
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - people (real)
+        - fiction/public-domain
+        - fiction/inspired
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source candidates
+      description: "Links/books/primary sources"
