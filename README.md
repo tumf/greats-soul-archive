@@ -81,8 +81,11 @@ See: `fiction/_guide.md`
 - [Abraham Lincoln](people/abraham-lincoln/)
 - [Angela Merkel](people/angela-merkel/)
 - [Augustus](people/augustus/)
+- [Cardinal Richelieu](people/cardinal-richelieu/)
 - [Catherine the Great](people/catherine-the-great/)
+- [Charles-Maurice de Talleyrand](people/talleyrand/)
 - [Franklin D. Roosevelt](people/franklin-d-roosevelt/)
+- [Harry Hopkins](people/harry-hopkins/)
 - [Julius Caesar](people/julius-caesar/)
 - [Lee Kuan Yew](people/lee-kuan-yew/)
 - [Mahatma Gandhi](people/mahatma-gandhi/)
@@ -90,14 +93,19 @@ See: `fiction/_guide.md`
 - [Nelson Mandela](people/nelson-mandela/)
 - [Otto von Bismarck](people/otto-von-bismarck/)
 - [Queen Elizabeth I](people/queen-elizabeth-i/)
+- [Sokollu Mehmed Pasha](people/sokollu-mehmed-pasha/)
 - [Theodore Roosevelt](people/theodore-roosevelt/)
+- [Thomas Cromwell](people/thomas-cromwell/)
 - [Tokugawa Ieyasu](people/tokugawa-ieyasu/)
+- [Toyotomi Hidenaga](people/toyotomi-hidenaga/)
 - [Winston Churchill](people/winston-churchill/)
 
 **Military / Strategy**
 - [Alexander the Great](people/alexander-the-great/)
 - [Carl von Clausewitz](people/carl-von-clausewitz/)
+- [George C. Marshall](people/george-c-marshall/)
 - [Hannibal](people/hannibal/)
+- [Marcus Agrippa](people/marcus-agrippa/)
 - [Miyamoto Musashi](people/miyamoto-musashi/)
 - [Napoleon Bonaparte](people/napoleon-bonaparte/)
 - [Oda Nobunaga](people/oda-nobunaga/)
@@ -151,6 +159,7 @@ See: `fiction/_guide.md`
 - [Srinivasa Ramanujan](people/srinivasa-ramanujan/)
 - [Stephen Hawking](people/stephen-hawking/)
 - [Thomas Edison](people/thomas-edison/)
+- [Vannevar Bush](people/vannevar-bush/)
 
 **Computing / Software**
 - [Alan Kay](people/alan-kay/)
@@ -173,6 +182,7 @@ See: `fiction/_guide.md`
 - [Daniel Kahneman](people/daniel-kahneman/)
 - [Elinor Ostrom](people/elinor-ostrom/)
 - [Herbert A. Simon](people/herbert-a-simon/)
+- [Jean-Baptiste Colbert](people/jean-baptiste-colbert/)
 - [John Maynard Keynes](people/john-maynard-keynes/)
 - [Milton Friedman](people/milton-friedman/)
 
@@ -188,14 +198,25 @@ See: `fiction/_guide.md`
 ### Fiction
 
 **Public domain**
+- *comedy*
+  - [Sancho Panza](fiction/public-domain/sancho-panza/)
 - *drama*
   - [Dorian Gray](fiction/public-domain/dorian-gray/)
   - [Ebenezer Scrooge](fiction/public-domain/ebenezer-scrooge/)
+  - [Friday](fiction/public-domain/friday/)
+  - [Horatio](fiction/public-domain/horatio/)
+  - [Patroclus](fiction/public-domain/patroclus/)
 - *fantasy*
   - [Alice](fiction/public-domain/alice/)
+  - [Faithful Companion (Archetype)](fiction/public-domain/samwise-archetype/)
+  - [Virgil (Dante’s guide)](fiction/public-domain/virgil/)
 - *horror*
   - [Count Dracula](fiction/public-domain/dracula/)
+  - [Dr. John Seward](fiction/public-domain/john-seward/)
+  - [Mina Harker](fiction/public-domain/mina-harker/)
+  - [Professor Abraham Van Helsing](fiction/public-domain/abraham-van-helsing/)
 - *mystery*
+  - [Dr. John Watson](fiction/public-domain/john-watson/)
   - [Sherlock Holmes](fiction/public-domain/sherlock-holmes/)
 - *scifi*
   - [Frankenstein’s Creature](fiction/public-domain/frankensteins-creature/)
