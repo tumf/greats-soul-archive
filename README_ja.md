@@ -199,19 +199,29 @@ fiction/
 
 - [Cardinal Richelieu](people/cardinal-richelieu/)
 - [Charles-Maurice de Talleyrand](people/talleyrand/)
+- [Detective With a Heart (Inspired)](fiction/inspired/detective-with-heart/)
 - [Dr. John Seward](fiction/public-domain/john-seward/)
 - [Dr. John Watson](fiction/public-domain/john-watson/)
+- [Eccentric Genius Inventor (Inspired)](fiction/inspired/eccentric-genius-inventor/)
 - [Faithful Companion (Archetype)](fiction/inspired/samwise-archetype/)
+- [Gentle Healer / Logistics Lead (Inspired)](fiction/inspired/gentle-healer-logistics/)
 - [George C. Marshall](people/george-c-marshall/)
 - [Harry Hopkins](people/harry-hopkins/)
 - [Horatio](fiction/public-domain/horatio/)
+- [Idol Producer / Coach (Inspired)](fiction/inspired/idol-producer-coach/)
 - [Jean-Baptiste Colbert](people/jean-baptiste-colbert/)
+- [Magic Academy Professor (Inspired)](fiction/inspired/magic-academy-professor/)
 - [Marcus Agrippa](people/marcus-agrippa/)
+- [Mecha Operations Tactician (Inspired)](fiction/inspired/mecha-operations-tactician/)
 - [Mina Harker](fiction/public-domain/mina-harker/)
+- [Quiet Samurai Mentor (Inspired)](fiction/inspired/quiet-samurai-mentor/)
 - [Sancho Panza](fiction/public-domain/sancho-panza/)
+- [Shōgi Master Strategist (Inspired)](fiction/inspired/shogi-master-strategist/)
 - [Sokollu Mehmed Pasha](people/sokollu-mehmed-pasha/)
+- [Streetwise Fixer (Inspired)](fiction/inspired/streetwise-fixer/)
 - [Thomas Cromwell](people/thomas-cromwell/)
 - [Toyotomi Hidenaga](people/toyotomi-hidenaga/)
+- [Tsundere Analyst (Inspired)](fiction/inspired/tsundere-analyst/)
 - [Vannevar Bush](people/vannevar-bush/)
 - [Virgil (Dante’s guide)](fiction/public-domain/virgil/)
 
@@ -242,12 +252,24 @@ fiction/
   - [Victor Frankenstein](fiction/public-domain/frankenstein/)
 
 **Inspired-by（現行作品）**
+- *drama*
+  - [Idol Producer / Coach (Inspired)](fiction/inspired/idol-producer-coach/)
+  - [Streetwise Fixer (Inspired)](fiction/inspired/streetwise-fixer/)
 - *fantasy*
   - [Faithful Companion (Archetype)](fiction/inspired/samwise-archetype/)
+  - [Gentle Healer / Logistics Lead (Inspired)](fiction/inspired/gentle-healer-logistics/)
+  - [Magic Academy Professor (Inspired)](fiction/inspired/magic-academy-professor/)
+- *mystery*
+  - [Detective With a Heart (Inspired)](fiction/inspired/detective-with-heart/)
 - *other*
+  - [Quiet Samurai Mentor (Inspired)](fiction/inspired/quiet-samurai-mentor/)
+  - [Shōgi Master Strategist (Inspired)](fiction/inspired/shogi-master-strategist/)
   - [Shōnen Determination Hero (Inspired)](fiction/inspired/shonen-determination-hero/)
+  - [Tsundere Analyst (Inspired)](fiction/inspired/tsundere-analyst/)
 - *scifi*
   - [Cyberpunk Hacker-Detective (Inspired)](fiction/inspired/cyberpunk-hacker-detective/)
+  - [Eccentric Genius Inventor (Inspired)](fiction/inspired/eccentric-genius-inventor/)
+  - [Mecha Operations Tactician (Inspired)](fiction/inspired/mecha-operations-tactician/)
 <!-- INDEX_JA:END -->
 
 ## コントリビュート
