@@ -22,6 +22,21 @@ We accept fiction under `fiction/`.
 
 See: `fiction/_guide.md`
 
+## Optional: install the contributor skill
+
+If you want a faster workflow, install the helper skill:
+
+- Skill repo: https://github.com/tumf/skills
+- Skill name: `greats-soul-archive-contributor`
+
+Install:
+
+```bash
+npx skills add tumf/skills
+```
+
+Then use the scaffold script from the installed skill to generate a new profile folder.
+
 ## Keeping the index up to date
 
 The README index is generated.
