@@ -23,6 +23,7 @@ class Entry:
     name: str
     link: str
     category: str | None = None
+    tags: set[str] | None = None
 
 
 def parse_name(identity_path: Path) -> str:
@@ -49,6 +50,33 @@ def read_meta_key(folder: Path, key: str) -> str | None:
     return m.group(1).strip().strip('"').strip("'")
 
 
+def read_meta_tags(folder: Path) -> set[str]:
+    meta = folder / "meta.yml"
+    if not meta.exists():
+        return set()
+    txt = meta.read_text(encoding="utf-8")
+    tags: set[str] = set()
+
+    # very small YAML subset parser:
+    # tags:
+    #   - assistant
+    in_tags = False
+    for raw in txt.splitlines():
+        line = raw.rstrip()
+        if re.match(r"^tags:\s*$", line):
+            in_tags = True
+            continue
+        if in_tags:
+            if re.match(r"^[a-zA-Z0-9_-]+:\s*", line):
+                in_tags = False
+                continue
+            m = re.match(r"^\s*-\s*([a-zA-Z0-9_-]+)\s*$", line)
+            if m:
+                tags.add(m.group(1).lower())
+
+    return tags
+
+
 def read_category(folder: Path) -> str | None:
     v = read_meta_key(folder, "category")
     return v.lower() if v else None
@@ -67,7 +95,8 @@ def list_people() -> list[Entry]:
             continue
         name = parse_name(identity)
         cat = read_category(d)
-        out.append(Entry(name=name, link=f"people/{d.name}/", category=cat))
+        tags = read_meta_tags(d)
+        out.append(Entry(name=name, link=f"people/{d.name}/", category=cat, tags=tags))
     out.sort(key=lambda e: e.name.lower())
     return out
 
@@ -88,7 +117,8 @@ def list_fiction(kind: str) -> list[Entry]:
         name = parse_name(identity)
         genre = read_meta_key(d, "genre")
         cat = genre.lower() if genre else None
-        out.append(Entry(name=name, link=f"fiction/{kind}/{d.name}/", category=cat))
+        tags = read_meta_tags(d)
+        out.append(Entry(name=name, link=f"fiction/{kind}/{d.name}/", category=cat, tags=tags))
     out.sort(key=lambda e: e.name.lower())
     return out
 
@@ -142,6 +172,26 @@ def group_people(people: list[Entry]) -> dict[str, list[Entry]]:
     return grouped
 
 
+def render_assistants_section_en(people: list[Entry], fiction: list[Entry]) -> str:
+    assistants: list[Entry] = []
+    for e in people + fiction:
+        if e.tags and "assistant" in e.tags:
+            assistants.append(e)
+    assistants.sort(key=lambda e: e.name.lower())
+
+    lines: list[str] = []
+    lines.append("### Assistants / Sidekicks")
+    lines.append("")
+    if not assistants:
+        lines.append("(None tagged yet)")
+        return "\n".join(lines) + "\n"
+
+    for e in assistants:
+        lines.append(f"- [{e.name}]({e.link})")
+
+    return "\n".join(lines) + "\n"
+
+
 def render_index_en() -> str:
     people = list_people()
     pub = list_fiction("public-domain")
@@ -161,6 +211,10 @@ def render_index_en() -> str:
         for e in entries:
             lines.append(f"- [{e.name}]({e.link})")
         lines.append("")
+
+    # Curated tag-based sections
+    lines.append(render_assistants_section_en(people, pub + insp).rstrip())
+    lines.append("")
 
     lines.append("### Fiction")
     lines.append("")
@@ -196,6 +250,26 @@ def render_index_en() -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
+def render_assistants_section_ja(people: list[Entry], fiction: list[Entry]) -> str:
+    assistants: list[Entry] = []
+    for e in people + fiction:
+        if e.tags and "assistant" in e.tags:
+            assistants.append(e)
+    assistants.sort(key=lambda e: e.name.lower())
+
+    lines: list[str] = []
+    lines.append("### 助手 / 相棒")
+    lines.append("")
+    if not assistants:
+        lines.append("（まだなし）")
+        return "\n".join(lines) + "\n"
+
+    for e in assistants:
+        lines.append(f"- [{e.name}]({e.link})")
+
+    return "\n".join(lines) + "\n"
+
+
 def render_index_ja() -> str:
     people = list_people()
     pub = list_fiction("public-domain")
@@ -215,6 +289,10 @@ def render_index_ja() -> str:
         for e in entries:
             lines.append(f"- [{e.name}]({e.link})")
         lines.append("")
+
+    # Curated tag-based sections
+    lines.append(render_assistants_section_ja(people, pub + insp).rstrip())
+    lines.append("")
 
     lines.append("### Fiction（架空）")
     lines.append("")

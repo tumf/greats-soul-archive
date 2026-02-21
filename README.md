@@ -195,6 +195,26 @@ See: `fiction/_guide.md`
 - [Virginia Woolf](people/virginia-woolf/)
 - [William Shakespeare](people/william-shakespeare/)
 
+### Assistants / Sidekicks
+
+- [Cardinal Richelieu](people/cardinal-richelieu/)
+- [Charles-Maurice de Talleyrand](people/talleyrand/)
+- [Dr. John Seward](fiction/public-domain/john-seward/)
+- [Dr. John Watson](fiction/public-domain/john-watson/)
+- [Faithful Companion (Archetype)](fiction/inspired/samwise-archetype/)
+- [George C. Marshall](people/george-c-marshall/)
+- [Harry Hopkins](people/harry-hopkins/)
+- [Horatio](fiction/public-domain/horatio/)
+- [Jean-Baptiste Colbert](people/jean-baptiste-colbert/)
+- [Marcus Agrippa](people/marcus-agrippa/)
+- [Mina Harker](fiction/public-domain/mina-harker/)
+- [Sancho Panza](fiction/public-domain/sancho-panza/)
+- [Sokollu Mehmed Pasha](people/sokollu-mehmed-pasha/)
+- [Thomas Cromwell](people/thomas-cromwell/)
+- [Toyotomi Hidenaga](people/toyotomi-hidenaga/)
+- [Vannevar Bush](people/vannevar-bush/)
+- [Virgil (Dante’s guide)](fiction/public-domain/virgil/)
+
 ### Fiction
 
 **Public domain**
