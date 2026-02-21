@@ -38,15 +38,20 @@ def parse_name(identity_path: Path) -> str:
     return identity_path.parent.name
 
 
-def read_category(folder: Path) -> str | None:
+def read_meta_key(folder: Path, key: str) -> str | None:
     meta = folder / "meta.yml"
     if not meta.exists():
         return None
     txt = meta.read_text(encoding="utf-8")
-    m = re.search(r"^category:\s*([a-zA-Z0-9_-]+)\s*$", txt, flags=re.MULTILINE)
+    m = re.search(rf"^{re.escape(key)}:\s*(.+?)\s*$", txt, flags=re.MULTILINE)
     if not m:
         return None
-    return m.group(1).strip().lower()
+    return m.group(1).strip().strip('"').strip("'")
+
+
+def read_category(folder: Path) -> str | None:
+    v = read_meta_key(folder, "category")
+    return v.lower() if v else None
 
 
 def list_people() -> list[Entry]:
@@ -75,11 +80,15 @@ def list_fiction(kind: str) -> list[Entry]:
     for d in sorted(base.iterdir()):
         if not d.is_dir():
             continue
+        if d.name.startswith("_"):
+            continue
         identity = d / "IDENTITY.md"
         if not identity.exists():
             continue
         name = parse_name(identity)
-        out.append(Entry(name=name, link=f"fiction/{kind}/{d.name}/"))
+        genre = read_meta_key(d, "genre")
+        cat = genre.lower() if genre else None
+        out.append(Entry(name=name, link=f"fiction/{kind}/{d.name}/", category=cat))
     out.sort(key=lambda e: e.name.lower())
     return out
 
@@ -156,18 +165,31 @@ def render_index_en() -> str:
     lines.append("### Fiction")
     lines.append("")
 
-    if pub:
-        lines.append("**Public domain**")
-        for e in pub:
-            lines.append(f"- [{e.name}]({e.link})")
+    def render_fiction_group(title: str, entries: list[Entry]) -> None:
+        if not entries:
+            lines.append(f"- {title}: `fiction/{title.lower().replace(' ', '-')}/` (no profiles yet)")
+            return
+        lines.append(f"**{title}**")
+        # group by genre (Entry.category)
+        genres: dict[str, list[Entry]] = {}
+        for e in entries:
+            g = e.category or "other"
+            genres.setdefault(g, []).append(e)
+        for g in sorted(genres.keys()):
+            lines.append(f"- *{g}*")
+            for e in sorted(genres[g], key=lambda x: x.name.lower()):
+                lines.append(f"  - [{e.name}]({e.link})")
+
         lines.append("")
+
+    if pub:
+        render_fiction_group("Public domain", pub)
     else:
         lines.append("- Public domain: `fiction/public-domain/` (no profiles yet)")
+        lines.append("")
 
     if insp:
-        lines.append("- Inspired-by (modern works):")
-        for e in insp:
-            lines.append(f"  - [{e.name}]({e.link})")
+        render_fiction_group("Inspired-by (modern works)", insp)
     else:
         lines.append("- Inspired-by (modern works): `fiction/inspired/` (no profiles yet)")
 
@@ -197,18 +219,29 @@ def render_index_ja() -> str:
     lines.append("### Fiction（架空）")
     lines.append("")
 
-    if pub:
-        lines.append("**Public domain**")
-        for e in pub:
-            lines.append(f"- [{e.name}]({e.link})")
+    def render_fiction_group(title: str, entries: list[Entry]) -> None:
+        if not entries:
+            lines.append(f"- {title}: （まだなし）")
+            return
+        lines.append(f"**{title}**")
+        genres: dict[str, list[Entry]] = {}
+        for e in entries:
+            g = e.category or "other"
+            genres.setdefault(g, []).append(e)
+        for g in sorted(genres.keys()):
+            lines.append(f"- *{g}*")
+            for e in sorted(genres[g], key=lambda x: x.name.lower()):
+                lines.append(f"  - [{e.name}]({e.link})")
         lines.append("")
+
+    if pub:
+        render_fiction_group("Public domain", pub)
     else:
         lines.append("- Public domain: `fiction/public-domain/`（まだなし）")
+        lines.append("")
 
     if insp:
-        lines.append("- Inspired-by（現行作品）:")
-        for e in insp:
-            lines.append(f"  - [{e.name}]({e.link})")
+        render_fiction_group("Inspired-by（現行作品）", insp)
     else:
         lines.append("- Inspired-by（現行作品）: `fiction/inspired/`（まだなし）")
 

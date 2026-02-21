@@ -188,17 +188,24 @@ See: `fiction/_guide.md`
 ### Fiction
 
 **Public domain**
-- [Alice](fiction/public-domain/alice/)
-- [Count Dracula](fiction/public-domain/dracula/)
-- [Dorian Gray](fiction/public-domain/dorian-gray/)
-- [Ebenezer Scrooge](fiction/public-domain/ebenezer-scrooge/)
-- [Frankenstein’s Creature](fiction/public-domain/frankensteins-creature/)
-- [Sherlock Holmes](fiction/public-domain/sherlock-holmes/)
-- [Victor Frankenstein](fiction/public-domain/frankenstein/)
+- *drama*
+  - [Dorian Gray](fiction/public-domain/dorian-gray/)
+  - [Ebenezer Scrooge](fiction/public-domain/ebenezer-scrooge/)
+- *fantasy*
+  - [Alice](fiction/public-domain/alice/)
+- *horror*
+  - [Count Dracula](fiction/public-domain/dracula/)
+- *mystery*
+  - [Sherlock Holmes](fiction/public-domain/sherlock-holmes/)
+- *scifi*
+  - [Frankenstein’s Creature](fiction/public-domain/frankensteins-creature/)
+  - [Victor Frankenstein](fiction/public-domain/frankenstein/)
 
-- Inspired-by (modern works):
-  - [Cyberpunk Hacker-Detective (Inspired)](fiction/inspired/cyberpunk-hacker-detective/)
+**Inspired-by (modern works)**
+- *other*
   - [Shōnen Determination Hero (Inspired)](fiction/inspired/shonen-determination-hero/)
+- *scifi*
+  - [Cyberpunk Hacker-Detective (Inspired)](fiction/inspired/cyberpunk-hacker-detective/)
 <!-- INDEX:END -->
 
 ## Contributing
