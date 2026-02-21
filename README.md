@@ -44,6 +44,46 @@ See: `fiction/_guide.md`
 - Use `SOUL.md` as a “thinking style adapter” for writing, decision memos, or reviews.
 - Teach: show how different mental models respond to the same prompt.
 
+## Index
+
+### Builders / Business
+
+- [Steve Jobs](people/steve-jobs/)
+- [Elon Musk](people/elon-musk/)
+- [Masayoshi Son](people/masayoshi-son/)
+- [Oda Nobunaga](people/oda-nobunaga/)
+
+### Philosophy
+
+- [Aristotle](people/aristotle/)
+- [Plato](people/plato/)
+- [Confucius](people/confucius/)
+- [René Descartes](people/rene-descartes/)
+- [David Hume](people/david-hume/)
+- [Immanuel Kant](people/immanuel-kant/)
+- [Friedrich Nietzsche](people/friedrich-nietzsche/)
+- [John Stuart Mill](people/john-stuart-mill/)
+- [Hannah Arendt](people/hannah-arendt/)
+- [Ludwig Wittgenstein](people/ludwig-wittgenstein/)
+
+### Science / Computing
+
+- [Isaac Newton](people/isaac-newton/)
+- [Charles Darwin](people/charles-darwin/)
+- [Marie Curie](people/marie-curie/)
+- [Albert Einstein](people/albert-einstein/)
+- [Richard Feynman](people/richard-feynman/)
+- [Galileo Galilei](people/galileo-galilei/)
+- [Michael Faraday](people/michael-faraday/)
+- [James Clerk Maxwell](people/james-clerk-maxwell/)
+- [Alan Turing](people/alan-turing/)
+- [Claude Shannon](people/claude-shannon/)
+
+### Fiction
+
+- Public domain: `fiction/public-domain/`
+- Inspired-by (modern works): `fiction/inspired/`
+
 ## Contributing
 
 PRs welcome — add a new person in ~10 minutes:

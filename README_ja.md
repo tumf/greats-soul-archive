@@ -44,6 +44,46 @@ fiction/
 - `SOUL.md` を“思考スタイル変換アダプタ”として、文章・意思決定・レビューに使う
 - 教育用途：同じ問いに対して、異なるメンタルモデルがどう返すかを比較する
 
+## インデックス
+
+### ビルダー / ビジネス
+
+- [Steve Jobs](people/steve-jobs/)
+- [Elon Musk](people/elon-musk/)
+- [Masayoshi Son](people/masayoshi-son/)
+- [Oda Nobunaga](people/oda-nobunaga/)
+
+### 哲学
+
+- [Aristotle](people/aristotle/)
+- [Plato](people/plato/)
+- [Confucius](people/confucius/)
+- [René Descartes](people/rene-descartes/)
+- [David Hume](people/david-hume/)
+- [Immanuel Kant](people/immanuel-kant/)
+- [Friedrich Nietzsche](people/friedrich-nietzsche/)
+- [John Stuart Mill](people/john-stuart-mill/)
+- [Hannah Arendt](people/hannah-arendt/)
+- [Ludwig Wittgenstein](people/ludwig-wittgenstein/)
+
+### 科学 / 計算機
+
+- [Isaac Newton](people/isaac-newton/)
+- [Charles Darwin](people/charles-darwin/)
+- [Marie Curie](people/marie-curie/)
+- [Albert Einstein](people/albert-einstein/)
+- [Richard Feynman](people/richard-feynman/)
+- [Galileo Galilei](people/galileo-galilei/)
+- [Michael Faraday](people/michael-faraday/)
+- [James Clerk Maxwell](people/james-clerk-maxwell/)
+- [Alan Turing](people/alan-turing/)
+- [Claude Shannon](people/claude-shannon/)
+
+### 架空人物
+
+- Public domain: `fiction/public-domain/`
+- Inspired-by（現行作品）: `fiction/inspired/`
+
 ## コントリビュート
 
 PR歓迎。人物追加は最短10分：
