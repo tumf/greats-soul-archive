@@ -24,6 +24,7 @@ class Entry:
     link: str
     category: str | None = None
     tags: set[str] | None = None
+    aliases: list[str] | None = None
 
 
 def parse_name(identity_path: Path) -> str:
@@ -50,31 +51,37 @@ def read_meta_key(folder: Path, key: str) -> str | None:
     return m.group(1).strip().strip('"').strip("'")
 
 
-def read_meta_tags(folder: Path) -> set[str]:
+def read_meta_list(folder: Path, key: str) -> list[str]:
     meta = folder / "meta.yml"
     if not meta.exists():
-        return set()
+        return []
     txt = meta.read_text(encoding="utf-8")
-    tags: set[str] = set()
 
-    # very small YAML subset parser:
-    # tags:
-    #   - assistant
-    in_tags = False
+    items: list[str] = []
+    in_list = False
     for raw in txt.splitlines():
         line = raw.rstrip()
-        if re.match(r"^tags:\s*$", line):
-            in_tags = True
+        if re.match(rf"^{re.escape(key)}:\s*$", line):
+            in_list = True
             continue
-        if in_tags:
+        if in_list:
+            # next top-level key ends the list
             if re.match(r"^[a-zA-Z0-9_-]+:\s*", line):
-                in_tags = False
+                in_list = False
                 continue
-            m = re.match(r"^\s*-\s*([a-zA-Z0-9_-]+)\s*$", line)
+            m = re.match(r"^\s*-\s*(.+?)\s*$", line)
             if m:
-                tags.add(m.group(1).lower())
+                items.append(m.group(1).strip().strip('"').strip("'"))
 
-    return tags
+    return items
+
+
+def read_meta_tags(folder: Path) -> set[str]:
+    return {t.lower() for t in read_meta_list(folder, "tags")}
+
+
+def read_meta_aliases(folder: Path) -> list[str]:
+    return read_meta_list(folder, "aliases")
 
 
 def read_category(folder: Path) -> str | None:
@@ -96,7 +103,8 @@ def list_people() -> list[Entry]:
         name = parse_name(identity)
         cat = read_category(d)
         tags = read_meta_tags(d)
-        out.append(Entry(name=name, link=f"people/{d.name}/", category=cat, tags=tags))
+        aliases = read_meta_aliases(d)
+        out.append(Entry(name=name, link=f"people/{d.name}/", category=cat, tags=tags, aliases=aliases))
     out.sort(key=lambda e: e.name.lower())
     return out
 
@@ -118,7 +126,8 @@ def list_fiction(kind: str) -> list[Entry]:
         genre = read_meta_key(d, "genre")
         cat = genre.lower() if genre else None
         tags = read_meta_tags(d)
-        out.append(Entry(name=name, link=f"fiction/{kind}/{d.name}/", category=cat, tags=tags))
+        aliases = read_meta_aliases(d)
+        out.append(Entry(name=name, link=f"fiction/{kind}/{d.name}/", category=cat, tags=tags, aliases=aliases))
     out.sort(key=lambda e: e.name.lower())
     return out
 
@@ -265,7 +274,10 @@ def render_assistants_section_ja(people: list[Entry], fiction: list[Entry]) -> s
         return "\n".join(lines) + "\n"
 
     for e in assistants:
-        lines.append(f"- [{e.name}]({e.link})")
+        disp = e.name
+        if e.aliases:
+            disp = f"{disp}（{e.aliases[0]}）"
+        lines.append(f"- [{disp}]({e.link})")
 
     return "\n".join(lines) + "\n"
 
@@ -287,7 +299,10 @@ def render_index_ja() -> str:
             continue
         lines.append(f"**{CATEGORY_LABELS_JA.get(cat, cat)}**")
         for e in entries:
-            lines.append(f"- [{e.name}]({e.link})")
+            disp = e.name
+            if e.aliases:
+                disp = f"{disp}（{e.aliases[0]}）"
+            lines.append(f"- [{disp}]({e.link})")
         lines.append("")
 
     # Curated tag-based sections
@@ -309,7 +324,10 @@ def render_index_ja() -> str:
         for g in sorted(genres.keys()):
             lines.append(f"- *{g}*")
             for e in sorted(genres[g], key=lambda x: x.name.lower()):
-                lines.append(f"  - [{e.name}]({e.link})")
+                disp = e.name
+                if e.aliases:
+                    disp = f"{disp}（{e.aliases[0]}）"
+                lines.append(f"  - [{disp}]({e.link})")
         lines.append("")
 
     if pub:
