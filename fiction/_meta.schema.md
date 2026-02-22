@@ -12,8 +12,13 @@ genre: mystery | horror | scifi | fantasy | drama | comedy | other
 tags:
   - assistant
 
-aliases:
-  - alternative display name
+aliases_by_lang:
+  ja:
+    - 日本語の一般的な名前
+  zh:
+    - 中文常用名
+  ko:
+    - 한국어 일반 표기
 ```
 
 - `category` and `genre` are used to group entries in the auto-generated README index.

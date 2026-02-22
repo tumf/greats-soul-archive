@@ -25,6 +25,7 @@ class Entry:
     category: str | None = None
     tags: set[str] | None = None
     aliases: list[str] | None = None
+    folder: Path | None = None
 
 
 def parse_name(identity_path: Path) -> str:
@@ -80,7 +81,54 @@ def read_meta_tags(folder: Path) -> set[str]:
     return {t.lower() for t in read_meta_list(folder, "tags")}
 
 
+def read_meta_aliases_by_lang(folder: Path, lang: str) -> list[str]:
+    # Minimal YAML subset parser for:
+    # aliases_by_lang:
+    #   ja:
+    #     - 諸葛亮
+    meta = folder / "meta.yml"
+    if not meta.exists():
+        return []
+    txt = meta.read_text(encoding="utf-8")
+
+    in_root = False
+    in_lang = False
+    items: list[str] = []
+
+    for raw in txt.splitlines():
+        line = raw.rstrip("\n")
+        if re.match(r"^aliases_by_lang:\s*$", line):
+            in_root = True
+            in_lang = False
+            continue
+
+        if in_root:
+            # next top-level key ends aliases_by_lang
+            if re.match(r"^[a-zA-Z0-9_-]+:\s*", line) and not line.startswith("  "):
+                in_root = False
+                in_lang = False
+                continue
+
+            # language key
+            if re.match(rf"^\s{{2}}{re.escape(lang)}:\s*$", line):
+                in_lang = True
+                continue
+            if re.match(r"^\s{2}[a-zA-Z0-9_-]+:\s*$", line) and not re.match(
+                rf"^\s{{2}}{re.escape(lang)}:\s*$", line
+            ):
+                in_lang = False
+                continue
+
+            if in_lang:
+                m = re.match(r"^\s{4}-\s*(.+?)\s*$", line)
+                if m:
+                    items.append(m.group(1).strip().strip('"').strip("'"))
+
+    return items
+
+
 def read_meta_aliases(folder: Path) -> list[str]:
+    # Backward compat: old `aliases:` list (deprecated)
     return read_meta_list(folder, "aliases")
 
 
@@ -104,7 +152,7 @@ def list_people() -> list[Entry]:
         cat = read_category(d)
         tags = read_meta_tags(d)
         aliases = read_meta_aliases(d)
-        out.append(Entry(name=name, link=f"people/{d.name}/", category=cat, tags=tags, aliases=aliases))
+        out.append(Entry(name=name, link=f"people/{d.name}/", category=cat, tags=tags, aliases=aliases, folder=d))
     out.sort(key=lambda e: e.name.lower())
     return out
 
@@ -127,7 +175,7 @@ def list_fiction(kind: str) -> list[Entry]:
         cat = genre.lower() if genre else None
         tags = read_meta_tags(d)
         aliases = read_meta_aliases(d)
-        out.append(Entry(name=name, link=f"fiction/{kind}/{d.name}/", category=cat, tags=tags, aliases=aliases))
+        out.append(Entry(name=name, link=f"fiction/{kind}/{d.name}/", category=cat, tags=tags, aliases=aliases, folder=d))
     out.sort(key=lambda e: e.name.lower())
     return out
 
@@ -275,8 +323,13 @@ def render_assistants_section_ja(people: list[Entry], fiction: list[Entry]) -> s
 
     for e in assistants:
         disp = e.name
-        if e.aliases:
-            disp = f"{disp}（{e.aliases[0]}）"
+        als = []
+        if e.folder:
+            als = read_meta_aliases_by_lang(e.folder, "ja")
+        if not als:
+            als = e.aliases or []
+        if als:
+            disp = f"{disp}（{als[0]}）"
         lines.append(f"- [{disp}]({e.link})")
 
     return "\n".join(lines) + "\n"
@@ -300,8 +353,13 @@ def render_index_ja() -> str:
         lines.append(f"**{CATEGORY_LABELS_JA.get(cat, cat)}**")
         for e in entries:
             disp = e.name
-            if e.aliases:
-                disp = f"{disp}（{e.aliases[0]}）"
+            als = []
+            if e.folder:
+                als = read_meta_aliases_by_lang(e.folder, "ja")
+            if not als:
+                als = e.aliases or []
+            if als:
+                disp = f"{disp}（{als[0]}）"
             lines.append(f"- [{disp}]({e.link})")
         lines.append("")
 
@@ -325,8 +383,13 @@ def render_index_ja() -> str:
             lines.append(f"- *{g}*")
             for e in sorted(genres[g], key=lambda x: x.name.lower()):
                 disp = e.name
-                if e.aliases:
-                    disp = f"{disp}（{e.aliases[0]}）"
+                als = []
+                if e.folder:
+                    als = read_meta_aliases_by_lang(e.folder, "ja")
+                if not als:
+                    als = e.aliases or []
+                if als:
+                    disp = f"{disp}（{als[0]}）"
                 lines.append(f"  - [{disp}]({e.link})")
         lines.append("")
 
