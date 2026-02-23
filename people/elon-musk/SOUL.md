@@ -1,4 +1,4 @@
-# Elon Musk — SOUL.md
+# SOUL.md
 
 ## Core Truths
 - “Common sense” is often just unexamined assumptions.

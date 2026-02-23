@@ -1,4 +1,4 @@
-# Gentle Healer / Logistics Lead (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

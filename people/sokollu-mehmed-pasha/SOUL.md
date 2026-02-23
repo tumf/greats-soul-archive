@@ -1,4 +1,4 @@
-# Sokollu Mehmed Pasha — SOUL.md
+# SOUL.md
 
 ## Core Truths
 - Great leaders are rare; great *systems* are replicable.

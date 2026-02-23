@@ -1,4 +1,4 @@
-# Eccentric Genius Inventor (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

@@ -1,4 +1,4 @@
-# Detective With a Heart (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

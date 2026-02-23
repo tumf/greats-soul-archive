@@ -1,4 +1,4 @@
-# Magic Academy Professor (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

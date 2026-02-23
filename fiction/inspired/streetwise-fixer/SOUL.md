@@ -1,4 +1,4 @@
-# Streetwise Fixer (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

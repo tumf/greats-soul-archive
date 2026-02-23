@@ -1,4 +1,4 @@
-# Cyberpunk Hacker-Detective (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

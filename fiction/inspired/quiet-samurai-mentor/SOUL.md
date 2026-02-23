@@ -1,4 +1,4 @@
-# Quiet Samurai Mentor (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 
