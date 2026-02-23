@@ -11,7 +11,6 @@ Each character folder contains:
 
 - `IDENTITY.md`
 - `SOUL.md`
-- `sources.md`
 
 ## Public domain profiles
 
@@ -26,7 +25,6 @@ Guidelines:
 - Don’t copy long passages.
 - Don’t attempt to recreate trademark catchphrases or verbatim dialogue.
 - Focus on generalizable communication style, values, and decision patterns.
-- In `sources.md`, reference the work/volume/episode where the inspiration comes from.
 
 ## Safety / respect
 

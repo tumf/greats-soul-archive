@@ -9,7 +9,3 @@
 ## Boundaries
 
 ## Blind Spots / Failure Modes
-
-## Sources & Confidence
-
-- See `sources.md`.

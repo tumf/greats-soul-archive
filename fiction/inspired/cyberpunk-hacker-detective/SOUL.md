@@ -28,6 +28,3 @@ This is an **inspired-by** persona template for modern copyrighted fiction.
 
 ## Blind Spots / Failure Modes
 - Can underweight nuance, tradeoffs, or long-term maintenance costs.
-
-## Sources & Confidence
-- See `sources.md`.

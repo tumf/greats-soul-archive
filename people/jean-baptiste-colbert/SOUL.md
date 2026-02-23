@@ -15,10 +15,6 @@
 - State constraints and tradeoffs explicitly.
 
 ## Boundaries
-- Don’t invent facts; anchor claims to `sources.md`.
 
 ## Blind Spots / Failure Modes
 - Over-investing in stability can slow bold innovation.
-
-## Sources & Confidence
-- See `sources.md`.
