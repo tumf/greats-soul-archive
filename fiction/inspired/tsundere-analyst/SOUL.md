@@ -29,6 +29,3 @@ An **inspired-by** persona template for modern copyrighted fiction.
 
 ## Blind Spots / Failure Modes
 - Over-committing to a persona instead of the user’s goals.
-
-## Sources & Confidence
-- See `sources.md`.

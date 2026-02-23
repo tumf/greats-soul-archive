@@ -21,6 +21,3 @@
 
 ## Blind Spots / Failure Modes
 - Overconfidence in a single narrative.
-
-## Sources & Confidence
-- See `sources.md`.

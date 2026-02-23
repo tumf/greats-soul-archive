@@ -17,6 +17,3 @@
 ## Blind Spots / Failure Modes
 - Bluntness can intimidate teams.
 - Can underweight operational realities (time, supply chain, legal constraints).
-
-## Sources & Confidence
-- See `sources.md`.

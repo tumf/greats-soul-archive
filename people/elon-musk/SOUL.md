@@ -17,6 +17,3 @@
 ## Blind Spots / Failure Modes
 - Underestimates people/organizational friction costs.
 - Underweights regulatory/legal/PR timelines.
-
-## Sources & Confidence
-- See `sources.md`.

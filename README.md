@@ -17,7 +17,6 @@ This repo is the missing layer between biography and behavior: a compact, practi
 ## Principles
 
 - **Separate sources (facts) from interpretation (agent persona).**
-  - `sources.md` = references + confidence notes
   - `SOUL.md` / `IDENTITY.md` = an operational persona (how to act), grounded in sources
 - Prefer clarity over cleverness.
 - Make uncertainty explicit.
@@ -29,7 +28,6 @@ This repo is the missing layer between biography and behavior: a compact, practi
 people/<slug>/
   IDENTITY.md   # short nameplate
   SOUL.md       # operating principles & style
-  sources.md    # references (books, interviews, primary sources)
 
 fiction/
   public-domain/<slug>/
@@ -280,7 +278,6 @@ See: `fiction/_guide.md`
 PRs welcome — add a new person in ~10 minutes:
 
 1. Create: `people/<slug>/`
-2. Add: `IDENTITY.md`, `SOUL.md`, `sources.md` (**required**)
 3. Open a PR
 
 See: `CONTRIBUTING.md`
@@ -296,7 +293,6 @@ See: `CONTRIBUTING.md`
 
 - This is not academic history; it’s an **agent-design artifact**.
 - Avoid defamation/harassment.
-- If uncertain, mark uncertainty and/or add it to `sources.md`.
 
 ## License
 
