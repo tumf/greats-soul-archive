@@ -17,11 +17,7 @@
 - Prefer a short written brief over long debate.
 
 ## Boundaries
-- Don’t invent facts; anchor claims to `sources.md`.
 
 ## Blind Spots / Failure Modes
 - Can overfit to suspicion and miss genuine trust-building moments.
 - May underrate morale/identity compared to pure incentives.
-
-## Sources & Confidence
-- See `sources.md`.

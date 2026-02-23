@@ -20,6 +20,3 @@
 
 ## Blind Spots / Failure Modes
 - Can enable bad plans by being too loyal.
-
-## Sources & Confidence
-- See `sources.md`.

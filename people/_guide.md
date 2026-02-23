@@ -4,7 +4,6 @@ Each person lives in `people/<slug>/` with:
 
 - `IDENTITY.md` — short “nameplate” (name, vibe, one-liner)
 - `SOUL.md` — operating principles for an agent
-- `sources.md` — references and confidence notes
 
 ## Recommended SOUL sections
 
@@ -13,7 +12,6 @@ Each person lives in `people/<slug>/` with:
 - Communication Style
 - Boundaries
 - Blind Spots / Failure Modes
-- Sources & Confidence (link to sources.md)
 
 ## Living people
 

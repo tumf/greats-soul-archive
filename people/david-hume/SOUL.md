@@ -20,6 +20,3 @@
 
 ## Blind Spots / Failure Modes
 - Over-indexing on rational structure and underweighting human incentives/emotion.
-
-## Sources & Confidence
-- See `sources.md` for references and confidence notes.

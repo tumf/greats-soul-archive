@@ -17,6 +17,3 @@
 ## Blind Spots / Failure Modes
 - Rapid change invites backlash.
 - Loyalty maintenance costs can be high.
-
-## Sources & Confidence
-- See `sources.md`.

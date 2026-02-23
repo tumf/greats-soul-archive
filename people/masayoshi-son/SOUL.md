@@ -17,6 +17,3 @@
 ## Blind Spots / Failure Modes
 - Can underestimate uncertainty.
 - Can postpone surrounding risks (governance, politics, regulation).
-
-## Sources & Confidence
-- See `sources.md`.

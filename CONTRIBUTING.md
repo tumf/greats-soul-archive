@@ -10,7 +10,6 @@ PR歓迎。人物追加も修正もOK。
 2. Add 3 files:
    - `IDENTITY.md`
    - `SOUL.md`
-   - `sources.md`
 3. Open a PR.
 
 ### Fictional characters
@@ -52,7 +51,6 @@ The README index is generated.
 ## Quality bar
 
 ### Required
-- `sources.md` is **required**.
 - No defamation / hate / harassment.
 - Separate **sources (facts)** from **SOUL/IDENTITY (interpretation for agents)**.
 
@@ -68,6 +66,5 @@ The README index is generated.
 
 ## Review checklist
 
-- [ ] Has `sources.md`
 - [ ] No personal attacks / speculation presented as fact
 - [ ] SOUL is usable as agent configuration

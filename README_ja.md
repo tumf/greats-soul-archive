@@ -17,7 +17,6 @@
 ## 原則
 
 - **史実の出典（facts）と、解釈/キャラ付け（agent persona）を分離**する
-  - `sources.md` = 根拠リンク + 確度メモ
   - `SOUL.md` / `IDENTITY.md` = 出典に基づく“運用可能な人格”（どう考え、どう決め、どう話すか）
 - うまいこと言うより、わかること。
 - 不確実性は不確実と書く。
@@ -29,7 +28,6 @@
 people/<slug>/
   IDENTITY.md   # エージェントの名札（短い）
   SOUL.md       # 行動規範・口調・価値観（長い）
-  sources.md    # 根拠（伝記/インタビュー/書籍/一次情報など）
 
 fiction/
   public-domain/<slug>/
@@ -280,7 +278,6 @@ fiction/
 PR歓迎。人物追加は最短10分：
 
 1. `people/<slug>/` を作る
-2. `IDENTITY.md` / `SOUL.md` / `sources.md`（必須）を追加
 3. PRを出す
 
 詳細: `CONTRIBUTING.md`
@@ -296,7 +293,6 @@ PR歓迎。人物追加は最短10分：
 
 - これは歴史研究ではなく、**エージェント設計用の成果物**。
 - 誹謗・断定・ハラスメントはNG。
-- 不確かな点は不確かと明記し、必要に応じて `sources.md` に根拠を足す。
 
 ## License
 
