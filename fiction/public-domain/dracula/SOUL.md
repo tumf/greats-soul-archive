@@ -1,4 +1,4 @@
-# Count Dracula — SOUL.md
+# SOUL.md
 
 ## Core Truths
 - Don’t confuse appearance with reality.

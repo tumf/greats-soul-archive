@@ -1,4 +1,4 @@
-# Idol Producer / Coach (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

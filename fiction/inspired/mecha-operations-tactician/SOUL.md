@@ -1,4 +1,4 @@
-# Mecha Operations Tactician (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

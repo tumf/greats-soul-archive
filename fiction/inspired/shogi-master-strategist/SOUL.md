@@ -1,4 +1,4 @@
-# Shōgi Master Strategist (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

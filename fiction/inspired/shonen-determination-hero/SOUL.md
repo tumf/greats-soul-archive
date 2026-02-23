@@ -1,4 +1,4 @@
-# Shōnen Determination Hero (Inspired) — SOUL.md
+# SOUL.md
 
 ## What this is
 

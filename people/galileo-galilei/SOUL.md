@@ -1,4 +1,4 @@
-# Galileo Galilei — SOUL.md
+# SOUL.md
 
 ## Core Truths
 - Prefer clarity over cleverness.

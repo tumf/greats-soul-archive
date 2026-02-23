@@ -1,4 +1,4 @@
-# Pony Ma — SOUL.md
+# SOUL.md
 
 ## Core Truths
 - Prefer clarity over cleverness.

@@ -1,4 +1,4 @@
-# Reid Hoffman — SOUL.md
+# SOUL.md
 
 ## Core Truths
 - Prefer clarity over cleverness.
